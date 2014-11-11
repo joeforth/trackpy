@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -6,17 +5,17 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>trackpy.Track &mdash; trackpy 0.2.3-34-g675de08 documentation</title>
+    <title>trackpy.Track &mdash; trackpy 0.2.3-236-gad699e2 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/spacelab/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.2.3-34-g675de08',
+        VERSION:     '0.2.3-236-gad699e2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,22 +24,19 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
-    <link rel="top" title="trackpy 0.2.3-34-g675de08 documentation" href="../index.html" />
-    <link rel="up" title="API reference" href="../api.html" />
-    <link rel="next" title="trackpy.DummyTrack" href="trackpy.DummyTrack.html" />
-    <link rel="prev" title="trackpy.IndexedPointND" href="trackpy.IndexedPointND.html" />
+    <link rel="top" title="trackpy 0.2.3-236-gad699e2 documentation" href="../index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body>
+  <body role="document">
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -53,14 +49,13 @@
         </button>
         <a class="navbar-brand" href="../index.html">
           trackpy</a>
-        <span class="navbar-text navbar-version pull-left"><b>0.2.3-34-g675de08</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>0.2.3-236-gad699e2</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
                 <li><a href="../tutorial.html">Tutorial</a></li>
-                <li><a href="../examples/index.html">Gallery</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -76,8 +71,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installing Trackpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../installation.html#updating-your-installation">Updating Your Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whatsnew.html">What&#8217;s new in the package</a></li>
 </ul>
-<ul class="simple">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/walkthrough.html">Walkthrough</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/prediction.html">Prediction: Beyond Simple Random Walks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/tracking-3d.html">Feature finding in 3D confocal images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/uncertainty.html">Subpixel Accuracy and Uncertainty Estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/subnets.html">Advanced Linking: Subnetworks and <code class="docutils literal"><span class="pre">search_range</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/adaptive-search.html">Adaptive Search: Changing <code class="docutils literal"><span class="pre">search_range</span></code> on the Fly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/on-disk.html">Streaming: Processing Unlimited Frames On-Disk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/performance.html">Making trackpy fast(er)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/linking-diagnostics.html">Obtaining Diagnostic Information from Linking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/parallel-locate.html">Parallelized Feature Location using IPython Parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/custom-feature-detection.html">Custom Feature Detection: Bubble tracking in 2D foams</a></li>
 </ul>
 </ul>
 </li>
@@ -125,80 +132,20 @@
 <h1>trackpy.Track<a class="headerlink" href="#trackpy-track" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="trackpy.Track">
-<em class="property">class </em><tt class="descclassname">trackpy.</tt><tt class="descname">Track</tt><big>(</big><em>point=None</em><big>)</big><a class="headerlink" href="#trackpy.Track" title="Permalink to this definition">¶</a></dt>
-<dd><p>Base class for objects to represent linked tracks.  Includes logic
-for adding, removing features to the track.  This can be sub-classed
-to provide additional track level computation as needed.</p>
+<em class="property">class </em><code class="descclassname">trackpy.</code><code class="descname">Track</code><span class="sig-paren">(</span><em>point=None</em><span class="sig-paren">)</span><a class="headerlink" href="#trackpy.Track" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for objects to represent linked tracks.</p>
+<p>Includes logic for adding, removing features to the track.  This can
+be sub-classed to provide additional track level computation as
+needed.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>point</strong> (<tt class="xref py py-class docutils literal"><span class="pre">Point</span></tt>) &#8211; The first feature in the track if not  <cite>None</cite>.</td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
-<dt id="trackpy.Track.__init__">
-<tt class="descname">__init__</tt><big>(</big><em>point=None</em><big>)</big><a class="headerlink" href="#trackpy.Track.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#trackpy.Track.__init__" title="trackpy.Track.__init__"><tt class="xref py py-obj docutils literal"><span class="pre">__init__</span></tt></a>([point])</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><tt class="xref py py-obj docutils literal"><span class="pre">add_point</span></tt>(point)</td>
-<td><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">param point:</th><td class="field-body">point to add</td>
-</tr>
-</tbody>
-</table>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>point</strong> : Point or None, optional</p>
+<blockquote class="last">
+<div><p>The first feature in the track</p>
+</div></blockquote>
 </td>
-</tr>
-<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">last_point</span></tt>()</td>
-<td><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">rtype:</th><td class="field-body"><tt class="xref py py-class docutils literal"><span class="pre">Point</span></tt></td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr class="row-even"><td><tt class="xref py py-obj docutils literal"><span class="pre">remove_point</span></tt>(point)</td>
-<td><table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">param point:</th><td class="field-body">point to remove from this track</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">reset_counter</span></tt>([c])</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">count</span></tt></td>
-<td>int(x=0) -&gt; int or long</td>
 </tr>
 </tbody>
 </table>
@@ -226,7 +173,7 @@ to provide additional track level computation as needed.</p>
     </p>
     <p>
         &copy; Copyright 2010-2014, Trackpy Contributors.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.<br/>
     </p>
   </div>
 </footer>

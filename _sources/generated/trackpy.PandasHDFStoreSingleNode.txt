@@ -6,29 +6,29 @@ trackpy.PandasHDFStoreSingleNode
 .. autoclass:: PandasHDFStoreSingleNode
 
    
-   .. automethod:: __init__
+
+
+  .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         PandasHDFStoreSingleNode.close
+         PandasHDFStoreSingleNode.dump
+         PandasHDFStoreSingleNode.get
+         PandasHDFStoreSingleNode.put
+
+
+
 
    
-   .. rubric:: Methods
 
-   .. autosummary::
-   
-      ~PandasHDFStoreSingleNode.__init__
-      ~PandasHDFStoreSingleNode.close
-      ~PandasHDFStoreSingleNode.dump
-      ~PandasHDFStoreSingleNode.get
-      ~PandasHDFStoreSingleNode.put
-   
-   
 
-   
-   
-   .. rubric:: Attributes
+   .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         PandasHDFStoreSingleNode.frames
+         PandasHDFStoreSingleNode.max_frame
+         PandasHDFStoreSingleNode.t_column
 
-   .. autosummary::
-   
-      ~PandasHDFStoreSingleNode.frames
-      ~PandasHDFStoreSingleNode.max_frame
-      ~PandasHDFStoreSingleNode.t_column
-   
-   
+

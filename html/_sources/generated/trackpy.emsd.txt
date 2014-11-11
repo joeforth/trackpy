@@ -1,6 +1,0 @@
-trackpy.emsd
-============
-
-.. currentmodule:: trackpy
-
-.. autofunction:: emsd

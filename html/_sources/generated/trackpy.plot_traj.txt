@@ -1,6 +1,0 @@
-trackpy.plot_traj
-=================
-
-.. currentmodule:: trackpy
-
-.. autofunction:: plot_traj

@@ -1,6 +1,0 @@
-trackpy.masks.r_squared_mask
-============================
-
-.. currentmodule:: trackpy
-
-.. autoattribute:: masks.r_squared_mask

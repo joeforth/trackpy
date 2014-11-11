@@ -3,14 +3,14 @@
 Introduction to Trackpy
 -----------------------
 
-Trackpy is a package for tracking blob-like particles in video and analyzing
-their trajectories. It implements and extends the widely-used Crocker--Grier
-algorithm in Python.
+Trackpy is a package for finding blob-like features in video, tracking them
+through time,  and analyzing their trajectories. It implements and extends the
+widely-used Crocker--Grier algorithm in Python.
 
 There are many similar projects. (See table below.)
 Our implementation is distinguished by succinct and flexible usage,
 a thorough testing framework ensuring code stability and accuracy,
-scalability, and thorough documentation. 
+scalability, and thorough documentation.
 
 Several researchers have merged their independent efforts into this code.
 We would like to see others in the community adopt it and potentially
@@ -54,24 +54,34 @@ Special Capabilities
     making possible some creative applications.
   * **Uncertainty is estimated** following a method `described in this paper <http://dx.doi.org/10.1529/biophysj.104.042457>`__ by Savin and Doyle.
   * **High-performance** components (numba acceleration and FFTW support) are used only if
-  if available. Since these can be tricky to install on some machines,
-  the code will automatically fall back on slower pure Python implementations
+    if available. Since these can be tricky to install on some machines,
+    the code will automatically fall back on slower pure Python implementations
+  * **Adaptive search** can prevent the tracking algorithm from failing
+    or becoming too slow, by automatically making adjustments when needed.
 
 Citing Trackpy
 ^^^^^^^^^^^^^^
 
-If you use trackpy for published research, please cite this repository,
-including the primary contributors' names -- Daniel B. Allan, Nathan C. Keim, and Thomas A. Caswell,
--- and ``doi:10.5281/zenodo.9971``.
-If your citation style *also* allows for a URL,
-please include `github.com/soft-matter/trackpy` to help other
-researchers discover trackpy. Our
-`DOI record pages <https://zenodo.org/search?ln=en&p=trackpy>`__
-provides more detail and citations in various formats.
+Trackpy can be cited using a DOI provided through Zenodo. To direct your
+readers to the specific version of trackpy that they can use to reproduce
+your results, cite the release of trackpy that you used for your work. The
+record pages linked below contain author lists, other details, and complete
+citations in various formats. If your citation style allows for a URL,
+please include a link to the github repository:
+`github.com/soft-matter/trackpy`.
+
+================= ================================================= ====================
+Release (version) Zenodo Record Pages with info and citations       DOI
+================= ================================================= ====================
+v0.2.4            `Record Page <https://zenodo.org/record/12255>`__ 10.5281/zenodo.12255
+v0.2.3            `Record Page <https://zenodo.org/record/11956>`__ 10.5281/zenodo.11956
+v0.2.2            `Record Page <https://zenodo.org/record/11132>`__ 10.5281/zenodo.11132
+v0.2              `Record Page <https://zenodo.org/record/9971>`__  10.5281/zenodo.9971
+================= ================================================= ====================
 
 Related Projects
 ^^^^^^^^^^^^^^^^
- 
+
 ============================ =============================================== =========================
 Author(s)                    Project URL                                     Language
 ============================ =============================================== =========================
@@ -91,8 +101,9 @@ Core Contributors
   * **Daniel Allan** feature-finding, uncertainty estimation,
     motion characterization and discrimination, plotting tools, tests
   * **Nathan Keim** alternative trajectory-linking implementations, major
-    speed-ups, prediction
+    speed-ups, prediction, adaptive search
   * **Thomas Caswell** multiple implementations of sophisticated trajectory-linking, tests
+  * **Casper van der Wel** anisotropic (3D) feature-finding, 3D plotting and analyses
 
 
 Support
@@ -112,3 +123,8 @@ reached at tcaswell@gmail.com.
 This package was developed in part by Nathan C. Keim, as part of his postdoctoral
 research in Paulo Arratia's group at the University of Pennsylvania,
 Philadelphia. This work was supported by NSF-MRSEC DMR-1120901.
+
+This package was developed in part by Casper van der Wel, as part of his
+PhD thesis work in Daniela Kraft’s group at the Huygens-Kamerlingh-Onnes laboratory,
+Institute of Physics, Leiden University, The Netherlands. This work was
+supported by the Netherlands Organisation for Scientific Research (NWO/OCW). 

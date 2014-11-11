@@ -1,6 +1,0 @@
-trackpy.link_iter
-=================
-
-.. currentmodule:: trackpy
-
-.. autofunction:: link_iter

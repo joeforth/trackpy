@@ -1,6 +1,0 @@
-trackpy.estimate_size
-=====================
-
-.. currentmodule:: trackpy
-
-.. autofunction:: estimate_size

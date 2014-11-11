@@ -1,6 +1,0 @@
-trackpy.local_maxima
-====================
-
-.. currentmodule:: trackpy
-
-.. autofunction:: local_maxima

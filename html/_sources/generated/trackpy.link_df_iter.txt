@@ -1,6 +1,0 @@
-trackpy.link_df_iter
-====================
-
-.. currentmodule:: trackpy
-
-.. autofunction:: link_df_iter

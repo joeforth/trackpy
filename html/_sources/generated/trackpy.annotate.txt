@@ -1,6 +1,0 @@
-trackpy.annotate
-================
-
-.. currentmodule:: trackpy
-
-.. autofunction:: annotate

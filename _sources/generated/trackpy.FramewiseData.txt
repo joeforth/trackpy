@@ -6,28 +6,29 @@ trackpy.FramewiseData
 .. autoclass:: FramewiseData
 
    
-   .. automethod:: __init__
+
+
+  .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         FramewiseData.close
+         FramewiseData.dump
+         FramewiseData.get
+         FramewiseData.put
+
+
+
 
    
-   .. rubric:: Methods
 
-   .. autosummary::
-   
-      ~FramewiseData.close
-      ~FramewiseData.dump
-      ~FramewiseData.get
-      ~FramewiseData.put
-   
-   
 
-   
-   
-   .. rubric:: Attributes
+   .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         FramewiseData.frames
+         FramewiseData.max_frame
+         FramewiseData.t_column
 
-   .. autosummary::
-   
-      ~FramewiseData.frames
-      ~FramewiseData.max_frame
-      ~FramewiseData.t_column
-   
-   
+

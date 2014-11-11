@@ -1,6 +1,0 @@
-trackpy.percentile_threshold
-============================
-
-.. currentmodule:: trackpy
-
-.. autofunction:: percentile_threshold

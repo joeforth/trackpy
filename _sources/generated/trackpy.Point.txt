@@ -6,27 +6,27 @@ trackpy.Point
 .. autoclass:: Point
 
    
-   .. automethod:: __init__
+
+
+  .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         Point.add_to_track
+         Point.in_track
+         Point.remove_from_track
+
+
+
 
    
-   .. rubric:: Methods
 
-   .. autosummary::
-   
-      ~Point.__init__
-      ~Point.add_to_track
-      ~Point.in_track
-      ~Point.remove_from_track
-   
-   
 
-   
-   
-   .. rubric:: Attributes
+   .. HACK -- the point here is that we don't want this to appear in the output, but the autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+      
+         Point.count
+         Point.track
 
-   .. autosummary::
-   
-      ~Point.count
-      ~Point.track
-   
-   
+

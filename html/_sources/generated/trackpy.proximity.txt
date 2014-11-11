@@ -1,6 +1,0 @@
-trackpy.proximity
-=================
-
-.. currentmodule:: trackpy
-
-.. autofunction:: proximity
