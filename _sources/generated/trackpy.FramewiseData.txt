@@ -1,0 +1,33 @@
+trackpy.FramewiseData
+=====================
+
+.. currentmodule:: trackpy
+
+.. autoclass:: FramewiseData
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FramewiseData.close
+      ~FramewiseData.dump
+      ~FramewiseData.get
+      ~FramewiseData.put
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~FramewiseData.frames
+      ~FramewiseData.max_frame
+      ~FramewiseData.t_column
+   
+   

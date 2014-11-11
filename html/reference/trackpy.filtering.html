@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>filtering Module &mdash; trackpy 0.2.3-34-g675de08 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.2.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.3-34-g675de08',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="trackpy 0.2.3-34-g675de08 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          trackpy</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.2.3-34-g675de08</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../tutorial.html">Tutorial</a></li>
+                <li><a href="../examples/index.html">Gallery</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction to Trackpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installing Trackpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html#updating-your-installation">Updating Your Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API reference</a></li>
+</ul>
+<ul class="simple">
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">filtering</span></tt> Module</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+  <div class="section" id="filtering-module">
+<h1><tt class="xref py py-mod docutils literal"><span class="pre">filtering</span></tt> Module<a class="headerlink" href="#filtering-module" title="Permalink to this headline">¶</a></h1>
+<p>These are various tools for filtering trajectories generated by
+<tt class="docutils literal"><span class="pre">link_df</span></tt>, designed to help you eliminate spurrious ones.</p>
+<span class="target" id="module-trackpy.filtering"></span><dl class="function">
+<dt id="trackpy.filtering.bust_clusters">
+<tt class="descclassname">trackpy.filtering.</tt><tt class="descname">bust_clusters</tt><big>(</big><em>tracks</em>, <em>quantile=0.8</em>, <em>threshold=None</em><big>)</big><a class="headerlink" href="#trackpy.filtering.bust_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter out trajectories with a mean particle size above a given quantile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>tracks</strong> : DataFrame</p>
+<blockquote>
+<div><p>must include columns named &#8216;particle&#8217; and &#8216;size&#8217;</p>
+</div></blockquote>
+<p><strong>quantile</strong> : number between 0 and 1</p>
+<blockquote>
+<div><p>quantile of particle &#8216;size&#8217; above which to cut off</p>
+</div></blockquote>
+<p><strong>threshold</strong> : number</p>
+<blockquote>
+<div><p>If specified, ignore quantile.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first last"><strong>a subset of tracks</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trackpy.filtering.bust_ghosts">
+<tt class="descclassname">trackpy.filtering.</tt><tt class="descname">bust_ghosts</tt><big>(</big><em>tracks</em>, <em>threshold=100</em><big>)</big><a class="headerlink" href="#trackpy.filtering.bust_ghosts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter out trajectories with few points. They are often specious.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>tracks</strong> : DataFrame</p>
+<blockquote>
+<div><p>must include columns named &#8216;frame&#8217; and &#8216;particle&#8217;</p>
+</div></blockquote>
+<p><strong>threshold</strong> : integer, default 100</p>
+<blockquote>
+<div><p>minimum number of points to survive</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first last"><strong>a subset of tracks</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trackpy.filtering.filter">
+<tt class="descclassname">trackpy.filtering.</tt><tt class="descname">filter</tt><big>(</big><em>tracks</em>, <em>condition_func</em><big>)</big><a class="headerlink" href="#trackpy.filtering.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>A workaround for a bug in pandas 0.12</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>tracks</strong> : DataFrame</p>
+<blockquote>
+<div><p>must include column named &#8216;particle&#8217;</p>
+</div></blockquote>
+<p><strong>condition_func</strong> : function</p>
+<blockquote>
+<div><p>The function is applied to each group of data. It must
+return True or False.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>DataFrame</strong> :</p>
+<blockquote class="last">
+<div><p>a subset of tracks</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trackpy.filtering.filter_clusters">
+<tt class="descclassname">trackpy.filtering.</tt><tt class="descname">filter_clusters</tt><big>(</big><em>tracks</em>, <em>quantile=0.8</em>, <em>threshold=None</em><big>)</big><a class="headerlink" href="#trackpy.filtering.filter_clusters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter out trajectories with a mean particle size above a given quantile.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>tracks</strong> : DataFrame</p>
+<blockquote>
+<div><p>must include columns named &#8216;particle&#8217; and &#8216;size&#8217;</p>
+</div></blockquote>
+<p><strong>quantile</strong> : number between 0 and 1</p>
+<blockquote>
+<div><p>quantile of particle &#8216;size&#8217; above which to cut off</p>
+</div></blockquote>
+<p><strong>threshold</strong> : number</p>
+<blockquote>
+<div><p>If specified, ignore quantile.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first last"><strong>a subset of tracks</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="trackpy.filtering.filter_stubs">
+<tt class="descclassname">trackpy.filtering.</tt><tt class="descname">filter_stubs</tt><big>(</big><em>tracks</em>, <em>threshold=100</em><big>)</big><a class="headerlink" href="#trackpy.filtering.filter_stubs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter out trajectories with few points. They are often specious.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>tracks</strong> : DataFrame</p>
+<blockquote>
+<div><p>must include columns named &#8216;frame&#8217; and &#8216;particle&#8217;</p>
+</div></blockquote>
+<p><strong>threshold</strong> : integer, default 100</p>
+<blockquote>
+<div><p>minimum number of points to survive</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first last"><strong>a subset of tracks</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/reference/trackpy.filtering.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2010-2014, Trackpy Contributors.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

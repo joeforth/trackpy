@@ -1,0 +1,30 @@
+trackpy.DummyTrack
+==================
+
+.. currentmodule:: trackpy
+
+.. autoclass:: DummyTrack
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~DummyTrack.__init__
+      ~DummyTrack.add_point
+      ~DummyTrack.reset_counter
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~DummyTrack.track_id
+   
+   

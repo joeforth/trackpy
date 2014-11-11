@@ -1,0 +1,35 @@
+trackpy.PandasHDFStoreBig
+=========================
+
+.. currentmodule:: trackpy
+
+.. autoclass:: PandasHDFStoreBig
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~PandasHDFStoreBig.__init__
+      ~PandasHDFStoreBig.close
+      ~PandasHDFStoreBig.dump
+      ~PandasHDFStoreBig.get
+      ~PandasHDFStoreBig.put
+      ~PandasHDFStoreBig.rebuild_cache
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~PandasHDFStoreBig.frames
+      ~PandasHDFStoreBig.max_frame
+      ~PandasHDFStoreBig.t_column
+   
+   

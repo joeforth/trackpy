@@ -1,0 +1,32 @@
+trackpy.Track
+=============
+
+.. currentmodule:: trackpy
+
+.. autoclass:: Track
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Track.__init__
+      ~Track.add_point
+      ~Track.last_point
+      ~Track.remove_point
+      ~Track.reset_counter
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Track.count
+   
+   
